@@ -1,32 +1,42 @@
-# week7_day2
+# week7_day1
 
-> React | State
+> React | create-react-app
 >
-> React | List & keys
-> 
-> React | Conditional rendering
+> React | Intro, JSX and Elements
+>
+> React | Components and Props
 
-## React | State
-- Los *stateful components* pueden disponer de estado, donde se almacenan tanto los datos cambiantes del mismo como los estados visuales por los que puede transurrir el componente.
-- El estado es un objeto accedido mediante `this.state` y actualizado mediante el método `.setState()`
-- Actualizar el estado supone renderizar de nuevo las partes que sean necesarias de la interfaz.
+## Main points: React
+- Librería de Javascript para interfaces de usuario en formato **Single Page Application**.
+- La transmisión de información se realiza a través de `props` en base a un **single way data flow**.
+- El paquete global `create-react-app` cubre todos los requerimientos para comenzar un proyecto de React.
 
-## React | List & keys
-- Es posible iterar sobre un Array para renderizar una lista de elementos de JSX o de componentes.
-- Cada elemento resultante debe disponer de una propiedad `key` de valor ùnico.
-- A través del operador de propagación, es posible enviar la totalidad del objeto al componente en vez de en `props` independientes.
+## Main points: Componentes
 
-## Main points: import & export
-- React permite dos tipos de exportaciones:
-  - **Nominales**:
-    - Permiten exportar un número indeterminado de elementos desde un archivo.
-    - Deben ser importados mediante la sintaxis:
-      ````javascript
-      import {nombreExportacion} from 'path'
-      ````
-  - **Por defecto**:
-    - Un archivo puede exportar un único elemento por defecto, mediante la sintaxis:
-      ````javascript
-      export default nombreExportacion
-      ````
-    - La importación del mismo puede realizarse bajo cualquier nomenclatura.
+Existen dos tipos de componentes en React:
+ - Componentes funcionales:
+   * Funciones de Javascript
+   * Stateless
+   * Retornan JSX
+   * Disponen de las propiedades en el parámetro `props`
+
+ * Componentes de clase:
+   * Clases de Javascript
+   * Stateful
+   * Retornan JSX a través de su método `.render()`
+   * Disponen de las propiedades en `this.props`
+
+El desarrollo de componentes supone:
+  - Importar React y, en caso de componentes de clase, `{ Component }`
+  - Declaración del componente.
+  - Exportación del componente (por defecto o nominal).
+
+## Main points: JSX
+   * Javascript **eXtension** que produce *React elements* para ser renderizados en el DOM.
+   * Los elementos de JSX son manejados como expresiones de Javascript.
+   * Todas las etiquetas disponen de apertura y cierre.
+   * La sintaxis de algunos atributos se ve alterada (`class` -> `className`).
+   * No es posible retornar elementos adyacentes.
+   * Es posible interpolar JS en elementos de JSX entre llaves.
+   * Para interpolar el valor de un atributo es necesario omitir las comillas del mismo.
+
