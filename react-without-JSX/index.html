@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello World Ironhackers</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+</head>
+
+<body>
+
+
+    <div id="root"></div>
+
+
+    <script>
+
+        // Raw React
+        var what_the_actual_fuck = React.createElement(
+            'h1',
+            null,
+            'Lolllllll!!!! In your faceee'
+        )
+
+        var container = React.createElement(
+            'section',
+            { className: 'hero', style: { padding: 200, background: 'red' } },
+            what_the_actual_fuck,
+            React.createElement('br', null),
+            React.createElement(
+                'p',
+                null,
+                'Lorem ipsum voladura de cabeza'
+            )
+        )
+
+        // Rendering
+        ReactDOM.render(
+            container,
+            document.getElementById('root')
+        )
+
+    </script>
+
+
+</body>
+
+</html>
